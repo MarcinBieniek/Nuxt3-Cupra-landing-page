@@ -3,7 +3,9 @@
 body {
   font-family: $font-main;
   font-size: $font-size;
-  background-color: $brown;
+  background-color: $mid-gray;
   color: $font-white;
   margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
