@@ -1,5 +1,5 @@
 <template>
   <SectionHeader />
   <slot />
-  <footer>Footer</footer>
+  <SectionFooter />
 </template>

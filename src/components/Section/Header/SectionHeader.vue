@@ -14,8 +14,12 @@
       </ul>
       <div :class="$style.contact">
         <a :class="$style.telephone" href="tel:510210-52552" rel="noindex">+48 58 506 65 65</a>
-        <button :class="$style.button">Zapytaj o ofertę</button>
-        <button :class="$style.button2">Umów jazdę próbną</button>
+        <NuxtLink to="/">
+          <button :class="$style.button">Zapytaj o ofertę</button>
+        </NuxtLink>
+        <NuxtLink to="/">
+          <button :class="$style.button2">Umów jazdę próbną</button>
+        </NuxtLink>
       </div>
     </div>
   </header>
@@ -54,13 +58,9 @@ const menu: menuType[] = [
 
   .header {
     .container {
-      max-width: 1200px;
+      @apply $styles.container;
       height: 84px;
-      margin: 0 auto;
-      display: flex;
       justify-content: space-between;
-      align-items: center;
-      color: $font-black;
 
       .logo {
         height: 20,33px;
@@ -140,15 +140,13 @@ const menu: menuType[] = [
         .button2 {
           height: 48px;
           padding: 0px 24px;
-          border: 1px solid $black;
-          margin-right: 20px;
           background-color: $button-black;
           color: $white;
           transition: background-color 300ms ease-out;
+          border: none;
 
           &:hover {
             background-color: $button-gray;
-            border: 1px solid $button-gray;
           }
         }
       }
