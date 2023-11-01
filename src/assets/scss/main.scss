@@ -1,0 +1,9 @@
+@import '@/assets/scss/variables.scss';
+
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+  background-color: $brown;
+  color: $font-white;
+  margin: 0 auto;
+}
