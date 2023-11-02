@@ -58,20 +58,20 @@
         <p>Prosimy Cię też o wyrażenie poniższych zgód w celu możliwości przedstawiania Ci atrakcyjnych ofert / promocji produktów, akcesoriów i usług marki CUPRA w przyszłości.</p>
 
         <div :class="$style.checkboxBox">
-          <input type="checkbox" id="scales" name="scales" />
-          <label for="scales">Zgadzam się na przetwarzanie moich danych osobowych przez Plichta spółka z ograniczoną odpowiedzialnością Spółka Komandytowa w celu przedstawienia mi informacji marketingowych i handlowych dotyczących produktów i usług marki CUPRA oraz innych powiązanych z marką CUPRA akcesoriów, produktów i usług motoryzacyjnych za pomocą:</label>
+          <input type="checkbox" id="check-agreement" />
+          <label for="check-agreement">Zgadzam się na przetwarzanie moich danych osobowych przez Plichta spółka z ograniczoną odpowiedzialnością Spółka Komandytowa w celu przedstawienia mi informacji marketingowych i handlowych dotyczących produktów i usług marki CUPRA oraz innych powiązanych z marką CUPRA akcesoriów, produktów i usług motoryzacyjnych za pomocą:</label>
         </div>
         <div :class="$style.checkboxBox">
-          <input type="checkbox" id="scales" name="scales" />
-          <label for="scales">E-mail</label>
+          <input type="checkbox" id="check-email" />
+          <label for="check-email">E-mail</label>
         </div>
         <div :class="$style.checkboxBox">
-          <input type="checkbox" id="scales" name="scales" />
-          <label for="scales">Telefon</label>
+          <input type="checkbox" id="check-phone" />
+          <label for="check-phone">Telefon</label>
         </div>
         <div :class="$style.checkboxBox">
-          <input type="checkbox" id="scales" name="scales" />
-          <label for="scales">Wiadomość SMS/MMS</label>
+          <input type="checkbox" id="check-sms" />
+          <label for="check-sms">Wiadomość SMS/MMS</label>
         </div>
 
         <p>Masz prawo do wglądu, modyfikacji, ograniczenia przetwarzania i usunięcia swoich danych oraz do wycofania  w każdym momencie swojej zgody.</p>
@@ -83,7 +83,7 @@
       :class="$style.button"
         type="submit"
       >
-        Send Message
+        Umów jazdę próbną
       </button>
 
     </form>
@@ -175,10 +175,42 @@
       width: 670px;
       font-size: 13px;
       line-height: 21px;
+      margin: 0 0 40px 0;
 
       .checkboxBox {
+        display: flex;
+        align-items: center;
+        position: relative;
+
         input {
           margin: 0 10px 0 0;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 1px solid $underline-gray;
+          background-color: inherit;
+
+          &:checked {
+            border: 2px solid $white;
+            background-color: $checkbox-checked;
+          }
+        }
+
+        label {
+          margin: 8px 0 10px 0;
+        }
+
+        &:first-of-type input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 0 15px 0 0;
+          width: 20px;
+          height: 20px;
+        }
+
+        &:first-of-type label {
+          margin: 0 0 15px 32px;
         }
       }
 

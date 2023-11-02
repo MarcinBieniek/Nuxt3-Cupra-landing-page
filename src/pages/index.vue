@@ -1,7 +1,7 @@
 <template>
   <SectionHero />
   <SectionTestDrive />
-  Slider
+  <SectionCarsSlider />
   <SectionFeatures />
   <SectionForm />
 </template>

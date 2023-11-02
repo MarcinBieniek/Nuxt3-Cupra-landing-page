@@ -108,7 +108,6 @@ const menu: menuType[] = [
         }
 
         // button 1
-
         .button {
           height: 48px;
           padding: 0px 24px;
