@@ -1,11 +1,3 @@
 <template>
-  <section :class="$style.content">Content</section>
+  <SectionHero />
 </template>
-
-<style lang="scss" module>
-@import '@/assets/scss/main.scss';
-  .content {
-    font-family: $font-main;
-    background-color: blue;
-  }
-</style>

@@ -58,7 +58,6 @@ const menu: menuType[] = [
 
   .header {
     .container {
-      @apply $styles.container;
       height: 84px;
       justify-content: space-between;
 
