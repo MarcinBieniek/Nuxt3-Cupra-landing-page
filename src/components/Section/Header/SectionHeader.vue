@@ -60,6 +60,7 @@ const menu: menuType[] = [
     .container {
       height: 84px;
       justify-content: space-between;
+      align-items: center;
 
       .logo {
         height: 20,33px;

@@ -25,7 +25,7 @@
   background-color: $font-white;
 
   .container {
-    @apply $styles.container;
+    align-items: center;
     height: 116px;
     font-size: 14px;
     font-family: $font-light;

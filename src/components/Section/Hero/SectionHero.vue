@@ -1,9 +1,3 @@
-
-import type { Style } from '#build/components';
-
-import type { Style } from '#build/components';
-
-import type { Style } from '#build/components';
 <template>
   <section :class="$style.hero">
     <NuxtImg src="/hero.png" :class="$style.image"/>
@@ -11,7 +5,9 @@ import type { Style } from '#build/components';
       <div :class="$style.text">
         <p>CUPRA Formentor</p>
         <p>Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha marki.</p>
-        <button :class="$style.button">Ruszaj na jazdę testową.</button>
+        <NuxtLink to="/">
+          <button :class="$style.button">Ruszaj na jazdę testową</button>
+        </NuxtLink>
       </div>
     </div>
   </section>
@@ -42,16 +38,15 @@ import type { Style } from '#build/components';
       p:first-of-type {
         opacity: 50%;
         font-size: 20px;
-        margin: 0;
+        margin: 0 0 5px 0;
         padding: 0;
       }
 
       p {
         font-family: $font-light;
         font-size: 60px;
-        margin: 0;
+        margin: 0 0 25px 0;
         padding: 0;
-        margin-bottom: 20px;
       }
 
       .button {
@@ -61,6 +56,7 @@ import type { Style } from '#build/components';
         color: $black;
         transition: background-color 300ms ease-out;
         border: none;
+        cursor: pointer;
 
         &:hover {
           background-color: $white;
