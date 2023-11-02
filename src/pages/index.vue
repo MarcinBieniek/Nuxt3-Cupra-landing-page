@@ -1,6 +1,7 @@
 <template>
   <SectionHero />
   <SectionTestDrive />
-  asd
+  Slider
   <SectionFeatures />
+  <SectionForm />
 </template>

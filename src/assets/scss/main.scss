@@ -17,4 +17,8 @@ body {
   color: $font-black;
 }
 
+input:focus {
+  outline: none;
+}
+
 
