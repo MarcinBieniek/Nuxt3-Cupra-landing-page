@@ -33,7 +33,7 @@
   </section>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" module scoped>
 @import '@/assets/scss/main.scss';
 
 // general component variables
