@@ -6,11 +6,11 @@
 
       <form :class="$style.form">
 
-        <div :class="$style.formSelect">
+        <div :class="$style.formSelect" v-for="item in select" :key="item.id">
 
           <div :class="$style.option">
-            <NuxtImg src="/select/01-CupraFormentor.png" :class="$style.image"/>
-            <p>Cupra Formentor</p>
+            <NuxtImg :src="item.img" :class="$style.image"/>
+            <p>{{ item.title }}</p>
             <NuxtImg src="/icons/arrow-down.svg" :class="$style.icon"/>
           </div>
 
@@ -89,9 +89,47 @@
   </section>
 </template>
 
+<script setup lang="ts">
+
+declare type selectType = {
+  id: number,
+  img: string;
+  title: string;
+  arrow?: string;
+}
+
+const select: selectType[] = [
+  {
+    id: 1,
+    img: '/select/01-CupraFormentor.png',
+    title: 'Cupra Formentor'
+  },
+  {
+    id: 2,
+    img: '/select/02-CupraLeon.png',
+    title: 'Cupra Leon',
+  },
+  {
+    id: 3,
+    img: '/select/03-CupraLeonSportstourer.png',
+    title: 'Leon Sportstourer',
+  },
+  {
+    id: 4,
+    img: '/select/04-CupraAteca.png',
+    title: 'Cupra Ateca'
+  },
+  {
+    id: 5,
+    img: '/select/05-NowaCupraBorn.png',
+    title: 'Nowa Cupra Born'
+  },
+]
+
+</script>
+
 <style lang="scss" module>
 @import '@/assets/scss/main.scss';
-
 .container {
   display: flex;
   flex-direction: column;
@@ -134,7 +172,6 @@
         max-width: 553px;
         height: 145px;
         background-color: $mid-gray;
-        margin: 0 0 40px 0;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -169,7 +206,7 @@
 
   // to do end
       .formInputs {
-        margin: 0 0 40px 0;
+        margin: 40px 0;
 
         .formInputsField {
           position: relative;
@@ -260,10 +297,12 @@
   }
 }
 
-/* media queries */
+  /* Media queries*/
 
-@media screen and (max-width: 794px) {
-
-}
+  @media screen and (max-width: 688px) {
+    .container .formBox .form .formSelect .option p {
+      margin-right: 20px;
+    }
+  }
 
 </style>

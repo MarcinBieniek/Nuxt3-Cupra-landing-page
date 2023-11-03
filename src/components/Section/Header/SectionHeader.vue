@@ -38,6 +38,7 @@
       <div :class="$style.contact">
         <a :class="$style.telephone" href="tel:510210-52552" rel="noindex">+48 58 506 65 65</a>
         <BaseButtonWhite title="Zapytaj o ofertę"/>
+        <div :class="$style.gap">asd</div>
         <BaseButtonBlack title="Umów jazdę próbną" />
       </div>
     </div>
@@ -221,12 +222,16 @@ const toggleMenu = () => {
           color: $black;
           text-decoration: underline rgba(0, 0, 0, 0);
           transition: text-decoration-color 300ms;
-          padding: 10px 10px;
+          padding: 10px 10px 30px 10px;
           text-align: center;
 
           &:hover {
             text-decoration-color: $font-black;
           }
+        }
+
+        .gap {
+          height: 30px;
         }
       }
     }
