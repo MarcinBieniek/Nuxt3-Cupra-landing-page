@@ -8,9 +8,7 @@
           <div :class="$style.text" >
             <p>{{ feature.title }}</p>
             <p>{{ feature.description }}</p>
-            <NuxtLink :to="feature.link">
-              <button :class="$style.button">{{ feature.button }}</button>
-            </NuxtLink>
+            <BaseButtonWhite :title="feature.button" />
           </div>
         </div>
       </div>
@@ -105,32 +103,6 @@ const features: featureType[] = [
             padding: 0;
             line-height: 46px;
             width: 436px;
-          }
-
-            .button {
-              height: 48px;
-              padding: 0px 24px;
-              border: 1px solid $black;
-              margin-right: 20px;
-              background-color: $white;
-              position: relative;
-              cursor: pointer;
-            }
-
-          .button::after {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              border: 1px solid $black;
-              transition: opacity 300ms ease-out;
-              opacity: 0;
-            }
-
-          .button:hover::after {
-            opacity: 1;
           }
         }
       }

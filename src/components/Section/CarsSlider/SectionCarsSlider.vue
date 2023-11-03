@@ -16,16 +16,13 @@
             <p>179 600 zł</p>
           </div>
         </div>
-        <button :class="$style.button">Umów jazdę próbną</button>
-
+        <BaseButtonBlack title="Umów jazdę próbną" />
         <div name="ArrowLeft" :class="$style.arrowLeft">
           <NuxtImg src="icons/ArrowLeft.svg" />
         </div>
-
         <div name="ArrowLeft" :class="$style.arrowRight">
           <NuxtImg src="icons/Arrowright.svg" />
         </div>
-
       </div>
     </div>
   </section>
@@ -77,6 +74,7 @@
         display: flex;
         justify-content: space-between;
         width: 516px;
+        margin-bottom: 20px;
 
         p:first-of-type {
           width: 140px;
@@ -109,19 +107,6 @@
             font-size: 20px;
             font-family: $font-main;
           }
-        }
-      }
-
-      .button {
-        height: 48px;
-        padding: 0px 24px;
-        background-color: $button-black;
-        color: $white;
-        transition: background-color 300ms ease-out;
-        border: none;
-
-        &:hover {
-          background-color: $button-gray;
         }
       }
 

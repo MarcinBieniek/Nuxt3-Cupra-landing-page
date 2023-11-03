@@ -5,9 +5,7 @@
       <div :class="$style.text">
         <p>CUPRA Formentor</p>
         <p>Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha marki.</p>
-        <NuxtLink to="/">
-          <button :class="$style.button">Ruszaj na jazdę testową</button>
-        </NuxtLink>
+        <BaseButtonSand title="Ruszaj na jazdę testową" />
       </div>
     </div>
   </section>
@@ -48,23 +46,7 @@
         margin: 0 0 25px 0;
         padding: 0;
       }
-
-      .button {
-        height: 48px;
-        padding: 0px 24px;
-        background-color: $light-beige;
-        color: $black;
-        transition: background-color 300ms ease-out;
-        border: none;
-        cursor: pointer;
-
-        &:hover {
-          background-color: $white;
-        }
-      }
     }
   }
-
-
 }
 </style>

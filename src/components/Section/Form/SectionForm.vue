@@ -79,12 +79,7 @@
         <p>Administratorem Twoich danych jest Plichta spółka z ograniczoną odpowiedzialnością Spółka Komandytowa,  z siedzibą w Wejherowie przy ulicy Gdańskiej 13c. Zapraszamy do zapoznania się z naszą polityką prywatności umieszczoną pod linkiem: <span>https://www.plichta.com.pl/polityka-prywatnosci</span></p>
       </div>
 
-      <button
-      :class="$style.button"
-        type="submit"
-      >
-        Umów jazdę próbną
-      </button>
+      <BaseButtonBlack title="Umów jazdę próbną" type="submit" />
 
     </form>
   </section>
@@ -139,7 +134,6 @@
     }
 
 // to do end
-
     .formInputs {
       margin: 0 0 40px 0;
 
@@ -226,20 +220,6 @@
         }
       }
     }
-
-    .button {
-      height: 48px;
-      padding: 0px 24px;
-      background-color: $button-black;
-      color: $white;
-      transition: background-color 300ms ease-out;
-      border: none;
-
-      &:hover {
-        background-color: $button-gray;
-      }
-    }
   }
-
 }
 </style>

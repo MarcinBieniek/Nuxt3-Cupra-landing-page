@@ -17,7 +17,7 @@
           <div :class="$style.textBox">
             <h1>Tylko dla odważnych</h1>
             <p>Model CUPRA, który idealnie wpisuje się w DNA marki. Unikalny SUV coupé, wyjątkowy, odwany i innowacyjny - zapewni Ci to, co najlepsze w marce CUPRA.</p>
-            <button :class="$style.button">Umów jazdę próbną</button>
+            <BaseButtonSand title="Umów jazdę próbną" />
           </div>
         </div>
 
@@ -94,23 +94,8 @@ span {
           h1 {
             font-size: 40px;
           }
-
-          .button {
-            height: 48px;
-            padding: 0px 24px;
-            background-color: $light-beige;
-            color: $black;
-            transition: background-color 300ms ease-out;
-            border: none;
-            cursor: pointer;
-
-            &:hover {
-              background-color: $white;
-            }
-          }
         }
       }
-
       .column2 {
         .imageBox {
           .image {

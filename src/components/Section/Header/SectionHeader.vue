@@ -14,12 +14,8 @@
       </ul>
       <div :class="$style.contact">
         <a :class="$style.telephone" href="tel:510210-52552" rel="noindex">+48 58 506 65 65</a>
-        <NuxtLink to="/">
-          <button :class="$style.button">Zapytaj o ofertę</button>
-        </NuxtLink>
-        <NuxtLink to="/">
-          <button :class="$style.button2">Umów jazdę próbną</button>
-        </NuxtLink>
+        <BaseButtonWhite title="Zapytaj o ofertę"/>
+        <BaseButtonBlack title="Umów jazdę próbną" />
       </div>
     </div>
   </header>
@@ -104,48 +100,6 @@ const menu: menuType[] = [
 
           &:hover {
             text-decoration-color: $font-black;
-          }
-        }
-
-        // button 1
-        .button {
-          height: 48px;
-          padding: 0px 24px;
-          border: 1px solid $black;
-          margin-right: 20px;
-          background-color: inherit;
-          position: relative;
-          cursor: pointer;
-        }
-
-        .button::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border: 1px solid $black;
-          transition: opacity 300ms ease-out;
-          opacity: 0;
-        }
-
-        .button:hover::after {
-          opacity: 1;
-        }
-
-        // button 2
-
-        .button2 {
-          height: 48px;
-          padding: 0px 24px;
-          background-color: $button-black;
-          color: $white;
-          transition: background-color 300ms ease-out;
-          border: none;
-
-          &:hover {
-            background-color: $button-gray;
           }
         }
       }
