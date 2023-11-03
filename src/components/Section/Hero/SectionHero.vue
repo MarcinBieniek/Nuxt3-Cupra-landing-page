@@ -24,14 +24,14 @@
     height: 100%;
     object-fit: cover;
   }
-
   .container {
     .text {
     position: absolute;
-    top: 200px;
-    width: 742px;
+    bottom: 100px;
+    max-width: 742px;
     line-height: 64.2px;
     color: $white;
+
 
       p:first-of-type {
         opacity: 50%;
@@ -49,4 +49,24 @@
     }
   }
 }
+
+  /* Media queries*/
+
+  @media screen and (max-width: 724px) {
+    .hero {
+      height: calc(75vh - 84px);
+    }
+    .hero .container .text p {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  @media screen and (max-width: 393px) {
+    .hero .container .text p {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
 </style>

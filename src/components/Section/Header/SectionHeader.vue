@@ -247,15 +247,4 @@ const toggleMenu = () => {
       display: flex;
     }
   }
-
-  @media screen and (max-width: 411px) {
-
-  }
-
-  @media screen and (max-width: 375px) {
-
-  }
-
-  @media screen and (max-width: 360px) {
-  }
 </style>
