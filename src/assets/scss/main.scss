@@ -5,7 +5,7 @@ body {
   font-size: $font-size;
   background-color: $mid-gray;
   color: $font-white;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -15,10 +15,48 @@ body {
   margin: 0 auto;
   display: flex;
   color: $font-black;
+  padding: 0px 40px;
 }
 
 input:focus {
   outline: none;
 }
 
+/* Media queries */
+
+@media screen and (min-width: 1367px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .container {
+    max-width: 411px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    max-width: 320px;
+  }
+}
 

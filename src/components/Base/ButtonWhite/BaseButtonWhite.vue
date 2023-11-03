@@ -22,9 +22,8 @@ const { title } = props;
 
 .button {
   height: 48px;
-  padding: 0 24px;
+  padding: 0 36px;
   border: 1px solid $black;
-  margin-right: 20px;
   background-color: $white;
   position: relative;
   cursor: pointer;
