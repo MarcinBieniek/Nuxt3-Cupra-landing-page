@@ -5,13 +5,15 @@
       <h2>Umów się na bezpłatną jazdę próbną</h2>
 
       <form :class="$style.form">
+
         <div :class="$style.formSelect">
-          <select id="cars" name="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
-          </select>
+
+          <div :class="$style.option">
+            <NuxtImg src="/select/01-CupraFormentor.png" :class="$style.image"/>
+            <p>Cupra Formentor</p>
+            <NuxtImg src="/icons/arrow-down.svg" :class="$style.icon"/>
+          </div>
+
         </div>
 
         <div :class="$style.formInputs">
@@ -131,13 +133,37 @@
         width: 80vw;
         max-width: 553px;
         height: 145px;
-        background-color: red;
+        background-color: $mid-gray;
         margin: 0 0 40px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
 
-        select {
-          width: 100%;
+        .option {
+          width: 503px;
           height: 100%;
-          background-color: blue;
+          border: 1px solid $underline-gray;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          .image {
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 306px;
+          }
+
+          p {
+            margin-right: 100px;
+          }
+
+          .icon {
+            height: 10px;
+            width: 10px;
+            margin-right: 10px;
+          }
         }
       }
 
