@@ -39,24 +39,28 @@ input:focus {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .container {
     max-width: 768px;
+    padding: 0px 20px;
   }
 }
 
 @media screen and (max-width: 411px) {
   .container {
     max-width: 411px;
+    padding: 0px 10px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .container {
     max-width: 375px;
+    padding: 0px 10px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .container {
     max-width: 320px;
+    padding: 0px 10px;
   }
 }
 

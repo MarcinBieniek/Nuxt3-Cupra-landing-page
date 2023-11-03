@@ -110,4 +110,22 @@ span {
   }
 }
 
+  /* Media queries*/
+
+  @media screen and (max-width: 724px) {
+    .testDrive .container .content {
+      grid-template-columns: 1fr;
+
+      .column1 {
+        .textBox {
+          margin: 60px 0 60px 0;
+        }
+      }
+
+      .column2 {
+        display: none;
+      }
+    }
+  }
+
 </style>

@@ -15,7 +15,7 @@
 @import '@/assets/scss/main.scss';
 
 .hero {
-  height: calc(100vh - 84px);
+  height: 100vh;
   width: 100%;
   position: relative;
 
@@ -54,7 +54,7 @@
 
   @media screen and (max-width: 724px) {
     .hero {
-      height: calc(75vh - 84px);
+      height: 75vh;
     }
     .hero .container .text p {
       font-size: 40px;

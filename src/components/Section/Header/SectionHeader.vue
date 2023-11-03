@@ -82,6 +82,12 @@ const toggleMenu = () => {
 @import '@/assets/scss/main.scss';
 
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color:  $mid-gray;
     .container {
       height: 84px;
       justify-content: space-between;
