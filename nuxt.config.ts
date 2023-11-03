@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   css: ['@/assets/scss/main.scss', 'animate.css/animate.min.css'],
-  modules: ['nuxt-swiper', 'nuxt-icon', '@nuxt/image'],
+  modules: ['nuxt-icons', '@nuxt/image'],
   image: {
     dir: 'assets/images'
   },
