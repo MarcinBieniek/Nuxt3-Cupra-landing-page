@@ -7,5 +7,5 @@ export default defineNuxtConfig({
   modules: ['nuxt-icons', '@nuxt/image'],
   image: {
     dir: 'assets/images'
-  },
+  }
 })
