@@ -117,12 +117,13 @@
         position: absolute;
         width: 50px;
         height: 50px;
-        left: -3%;
+        left: 0%;
         top: 50;
         background-color: $white;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         img {
           width: 14px;
@@ -134,12 +135,13 @@
         position: absolute;
         width: 50px;
         height: 50px;
-        right: -3%;
+        right: 0%;
         top: 50;
         background-color: $white;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         img {
           width: 14px;
@@ -151,6 +153,16 @@
 }
 
 /* media queries */
+
+@media screen and (min-width: 1024px) {
+  .sliderContainer .sliderRow .sliderItem  {
+    width: 800px;
+
+    .image {
+      width: 70%;
+    }
+  }
+}
 
 @media screen and (max-width: 650px) {
   .sliderContainer .sliderRow .sliderItem {
@@ -176,17 +188,7 @@
         margin: 5px 0;
       }
     }
-
-    .arrowLeft {
-      left: 0%;
-    }
-
-    .arrowRight {
-      right: 0%;
-    }
   }
-
-
 }
 
 </style>

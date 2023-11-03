@@ -98,7 +98,8 @@ const features: featureType[] = [
           max-width: 400px;
           position: absolute;
           top: 0;
-          right:-40px;
+          right:0px;
+          overflow: hidden;
 
           p:first-of-type {
             font-size: 16px;
@@ -128,12 +129,18 @@ const features: featureType[] = [
   }
 }
 
-  /* Media queries*/
+/* media queries */
 
-  @media screen and (max-width: 610px) {
-    .item .text {
-
-    }
+@media screen and (max-width: 586px) {
+  .features .container .item .textBox .text p {
+    font-size: 26px;
+    line-height: 34px;
   }
+
+  .features .container .itemReverse .textBox .text p {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
 
 </style>

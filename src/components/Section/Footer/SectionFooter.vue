@@ -44,6 +44,7 @@
         cursor: pointer;
         text-decoration: underline rgba(0, 0, 0, 0);
         transition: text-decoration-color 300ms;
+        text-align: center;
 
         &:hover {
           text-decoration-color: $font-black;
@@ -70,6 +71,27 @@
       }
     }
   }
+}
+
+/* media queries */
+
+@media screen and (max-width: 674px) {
+  .footer .container {
+    .links {
+
+    }
+
+    .socials {
+      display: flex;
+
+      .icon {
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+
 }
 
 </style>
