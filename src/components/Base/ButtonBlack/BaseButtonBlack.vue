@@ -35,6 +35,10 @@ const { title, type } = props;
   &:hover {
     background-color: $button-gray;
   }
+
+  &:active {
+    background-color: $black;
+  }
 }
 
 </style>

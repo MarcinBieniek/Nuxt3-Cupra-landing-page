@@ -43,6 +43,10 @@ const { title } = props;
   &:hover::after {
     opacity: 1;
   }
+
+  &:active::after {
+    opacity: 0;
+  }
 }
 
 </style>

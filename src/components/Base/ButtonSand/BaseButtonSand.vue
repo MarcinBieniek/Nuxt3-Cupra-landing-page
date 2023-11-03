@@ -32,6 +32,10 @@ const { title } = props;
   &:hover {
     background-color: $white;
   }
+
+  &:active {
+    background-color: $light-beige;
+  }
 }
 
 </style>
