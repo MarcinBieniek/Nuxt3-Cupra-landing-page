@@ -3,8 +3,11 @@
     <div :class="$style.container">
 
       <div :class="[feature.id % 2 !== 0 ? $style.item : $style.itemReverse]" v-for="feature in features" :key="feature.id">
-        <NuxtImg :src="feature.img" :class="$style.image"/>
+        <div :class="$style.image">
+          <NuxtImg :src="feature.img" />
+        </div>
         <div :class="$style.textBox">
+
           <div :class="$style.text" >
             <p>{{ feature.title }}</p>
             <p>{{ feature.description }}</p>
@@ -71,24 +74,31 @@ const features: featureType[] = [
     .item, .itemReverse {
       display: flex;
       margin-bottom: 100px;
+      max-width: 100%;
+      position: relative;
 
       .image {
-        width: 787px;
-        object-fit: cover;
+        max-width: auto;
+        overflow: hidden;
+
+        img {
+          width: 787px;
+          object-fit: cover;
+        }
       }
 
       .textBox {
-        position: relative;
 
         .text {
           color: $white;
           background-color: $brown;
-          width: 450px;
-          height: 332px;
-          padding: 0px 80px;
+          padding: 0px 40px 0px 80px;
           margin: 0;
+          height: 330px;
+          max-width: 400px;
           position: absolute;
-          left: -80px;
+          top: 0;
+          right:-40px;
 
           p:first-of-type {
             font-size: 16px;
@@ -102,7 +112,6 @@ const features: featureType[] = [
             margin: 0 0 25px 0;
             padding: 0;
             line-height: 46px;
-            width: 436px;
           }
         }
       }
@@ -110,14 +119,21 @@ const features: featureType[] = [
 
     .itemReverse {
       flex-direction: row-reverse;
-
       .textBox {
         .text {
-          left: -520px;
+          left: -40px;
         }
       }
     }
   }
 }
+
+  /* Media queries*/
+
+  @media screen and (max-width: 610px) {
+    .item .text {
+
+    }
+  }
 
 </style>
