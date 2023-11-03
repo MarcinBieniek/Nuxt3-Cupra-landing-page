@@ -1,6 +1,7 @@
 <template>
   <section :class="$style.sliderContainer">
     <div :class="$style.sliderRow">
+
       <div :class="$style.sliderItem">
         <h1>Nowa CUPRA Born</h1>
         <NuxtImg src="slider/01-CupraBorn.png" :class="$style.image"/>
@@ -24,6 +25,7 @@
           <NuxtImg src="icons/Arrowright.svg" />
         </div>
       </div>
+
     </div>
   </section>
 </template>
@@ -40,16 +42,16 @@
   font-size: 14px;
 
   .sliderRow {
-
     .sliderItem {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 900px;
       height: 635px;
       background-color: pink;
       position: relative;
+      padding: 0 40px;
+      width: auto;
 
       h1 {
         margin: 0 0 50px 0;
@@ -58,7 +60,9 @@
       }
 
       .image {
-        height: 260px
+        width: 100%;
+        height: auto;
+        max-width: 100%;
       }
 
       p {
@@ -73,7 +77,6 @@
       .offers {
         display: flex;
         justify-content: space-between;
-        width: 516px;
         margin-bottom: 20px;
 
         p:first-of-type {
@@ -145,6 +148,45 @@
       }
     }
   }
+}
+
+/* media queries */
+
+@media screen and (max-width: 650px) {
+  .sliderContainer .sliderRow .sliderItem {
+    padding: 0 10px;
+
+    h1 {
+      font-size: 30px;
+    }
+    .image {
+      width: 70%;
+    }
+
+    .offers {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p:first-of-type {
+        text-align: center;
+      }
+
+      .monthlyPrice {
+        margin: 5px 0;
+      }
+    }
+
+    .arrowLeft {
+      left: 0%;
+    }
+
+    .arrowRight {
+      right: 0%;
+    }
+  }
+
+
 }
 
 </style>
