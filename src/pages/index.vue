@@ -1,7 +1,7 @@
 <template>
   <SectionHero class="animate__animated animate__fadeInUp" />
   <SectionTestDrive  />
-  <SectionCarsSlider />
+  <SectionCarsSlider2 />
   <SectionFeatures />
   <SectionForm />
 </template>
