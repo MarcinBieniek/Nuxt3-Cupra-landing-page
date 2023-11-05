@@ -1,82 +1,170 @@
 <template>
+  <div :class="$style.container">
   <section :class="$style.sliderContainer">
-    <div :class="$style.sliderRow">
-
-      <div :class="$style.sliderItem">
-        <h1>Nowa CUPRA Born</h1>
-        <NuxtImg src="slider/01-CupraBorn.png" :class="$style.image"/>
-        <p>Akumulator 58 kWh moc do 204 KM<span>2</span></p>
+    <Swiper
+      :class="$style.sliderRow"
+      :modules="[SwiperEffectCreative]"
+      :slides-per-view="1"
+      :loop="true"
+      :effect="'creative'"
+      :creative-effect="{
+        prev: {
+          shadow: false,
+          translate: ['-100%', 0, -1]
+        },
+        next: {
+          translate: ['100%', 0, 0]
+        }
+      }"
+    >
+      <SwiperSlide v-for="slide in carouselItems" :key="slide.title" :class="$style.sliderItem">
+        <h1>{{ slide.title}}</h1>
+        <NuxtImg :src="slide.image" :class="$style.image"/>
+        <p>
+          <p v-if="slide.electric">
+            Akumulator {{ slide.maxSpeed }} kWh&nbsp;
+          </p>
+          <p v-else>
+            Maksymalna prędkość {{ slide.maxSpeed }} KM/H&nbsp;
+          </p>
+          <p v-if="slide.electric">
+            Moc do {{ slide.enginePower }} KM
+          </p>
+          <p v-else>
+            Moc silnika {{ slide.maxSpeed }} KM
+          </p>
+        </p>
         <div :class="$style.offers">
           <p>Dostępny w leasingu z 0% opłat własnej</p>
           <div :class="$style.monthlyPrice">
             <p>Rata netto/mies. od *</p>
-            <p>1943 zł</p>
+            <p>{{ slide.monthlyPrice }} zł</p>
           </div>
           <div :class="$style.totalPrice">
             <p>Cena brutto ju od</p>
-            <p>179 600 zł</p>
+            <p>{{ slide.totalPrice }} zł</p>
           </div>
         </div>
         <BaseButtonBlack title="Umów jazdę próbną" />
-        <div name="ArrowLeft" :class="$style.arrowLeft">
-          <NuxtImg src="icons/ArrowLeft.svg" />
-        </div>
-        <div name="ArrowLeft" :class="$style.arrowRight">
-          <NuxtImg src="icons/Arrowright.svg" />
-        </div>
-      </div>
+        <SectionCarsSliderControlers />
+      </SwiperSlide>
 
-    </div>
+    </Swiper>
   </section>
+</div>
+
 </template>
+
+<script setup lang="ts">
+
+const swiper = useSwiper()
+
+declare type carouselItemType = {
+  title: string;
+  image: string;
+  maxSpeed: string;
+  enginePower: string;
+  monthlyPrice: string;
+  totalPrice: string;
+  electric: boolean
+}
+
+const carouselItems: carouselItemType[] = [
+  {
+    title: 'CUPRA Formentor',
+    image: 'slider/01-CupraFormentor.png',
+    maxSpeed: '204',
+    enginePower: '150',
+    monthlyPrice: '1439',
+    totalPrice: '127 800',
+    electric: false
+  },
+  {
+    title: 'CUPRA Formentor VZ',
+    image: 'slider/02-Formentor-VZ.png',
+    maxSpeed: '250',
+    enginePower: '310',
+    monthlyPrice: '1553',
+    totalPrice: '152 400',
+    electric: false
+  },
+  {
+    title: 'CUPRA Ateca',
+    image: 'slider/03-Formentor-VZ.png',
+    maxSpeed: '247',
+    enginePower: '300',
+    monthlyPrice: '2334',
+    totalPrice: '220 700',
+    electric: false
+  },
+  {
+    title: 'Nowa CUPRA Born',
+    image: 'slider/04-NowaCupraBorn.png',
+    maxSpeed: '58',
+    enginePower: '204',
+    monthlyPrice: '1943',
+    totalPrice: '179 600',
+    electric: true
+  },
+  {
+    title: 'Leon',
+    image: 'slider/05-Leon.png',
+    maxSpeed: '245',
+    enginePower: '300',
+    monthlyPrice: '1553',
+    totalPrice: '152 400',
+    electric: false
+  },
+  {
+    title: 'Leon Sportstourer',
+    image: 'slider/06-LeonSportstourer.png',
+    maxSpeed: '250',
+    enginePower: '310',
+    monthlyPrice: '1601',
+    totalPrice: '156 200',
+    electric: false
+  },
+]
+
+</script>
 
 <style lang="scss" module>
 @import '@/assets/scss/main.scss';
-
-.sliderContainer {
+.sliderContainer{
+  text-align: center;
   color: $black;
   font-family: $font-light;
+  width: 100%;
+  margin: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
 
   .sliderRow {
+
     .sliderItem {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 635px;
-      background-color: pink;
       position: relative;
-      padding: 0 40px;
-      width: auto;
 
       h1 {
         margin: 0 0 50px 0;
         font-size: 48px;
         line-height: 51.84px;
       }
-
       .image {
-        width: 100%;
+        width: 80%;
         height: auto;
-        max-width: 100%;
       }
 
       p {
         line-height: 20px;
+        display: flex;
+        justify-content: center;
 
-        span {
-          font-size: 7px;
-          vertical-align: super;
-        }
       }
 
       .offers {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 20px;
 
         p:first-of-type {
@@ -87,7 +175,9 @@
           margin: 16px 48px 0 48px;
 
           p {
+            text-align: center;
             margin: 0;
+            width: 200px;
           }
 
           p:last-of-type {
@@ -113,41 +203,6 @@
         }
       }
 
-      .arrowLeft {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        left: 0%;
-        top: 50;
-        background-color: $white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        img {
-          width: 14px;
-          height: 14px;
-        }
-      }
-
-      .arrowRight {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        right: 0%;
-        top: 50;
-        background-color: $white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        img {
-          width: 14px;
-          height: 14px;
-        }
-      }
     }
   }
 }
