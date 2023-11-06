@@ -81,8 +81,35 @@
           <p>Administratorem Twoich danych jest Plichta spółka z ograniczoną odpowiedzialnością Spółka Komandytowa,  z siedzibą w Wejherowie przy ulicy Gdańskiej 13c. Zapraszamy do zapoznania się z naszą polityką prywatności umieszczoną pod linkiem: <span>https://www.plichta.com.pl/polityka-prywatnosci</span></p>
         </div>
 
-        <BaseButtonBlack title="Umów jazdę próbną" type="submit" />
+        <BaseButtonBlack title="Umów jazdę próbną" type="submit" @click.prevent="submitForm" />
 
+        <div :class="$style.formLoading">
+          {{ isLoading ? 'Loading...' : 'Wiadomość wysłana' }}
+        </div>
+
+        <div :class="$style.formValidation">
+          <div
+            v-if="formFeedback === 'error'"
+          >
+            Pojawił się błąd przy wysłaniu formularza.
+          </div>
+          <div
+            v-else-if="formFeedback === 'success'"
+          >
+            Formularz wysłany!
+          </div>
+          <div
+            v-else-if="formFeedback === 'incomplete'"
+          >
+            Uzupełnij wszystkie pola.
+          </div>
+          <div
+            v-else-if="formFeedback === 'invalid'"
+          >
+            Dodaj prawidłowy adres email.
+          </div>
+
+      </div>
       </form>
     </div>
   </section>
@@ -134,6 +161,37 @@ const formData = reactive({
   email: ''
 });
 
+// form submit & validation
+
+type FormFeedbackType = 'incomplete' | 'invalid' | 'success' | 'error' | null;
+
+const isLoading = ref(false);
+const success = ref(true);
+const formFeedback: Ref<FormFeedbackType> = ref(null);
+const submitForm = async () => {
+  isLoading.value = true;
+  formFeedback.value = null;
+  if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() ) {
+    formFeedback.value = 'incomplete';
+    isLoading.value = false;
+    return;
+  }
+
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  if (formData.email && !regex.test(formData.email)) {
+    formFeedback.value = 'invalid';
+    success.value = false;
+    isLoading.value = false;
+    return;
+  }
+
+  setTimeout(() => {
+    success.value = true;
+    formFeedback.value = 'success';
+    isLoading.value = false;
+  }, 1000);
+};
+
 import { ref } from 'vue';
 
 const agreementChecked = ref(false);
@@ -177,8 +235,6 @@ const agreementChecked = ref(false);
       justify-content: center;
       align-items: center;
 
-  // to do
-
       .formSelect {
         width: 80vw;
         max-width: 553px;
@@ -216,7 +272,6 @@ const agreementChecked = ref(false);
         }
       }
 
-  // to do end
       .formInputs {
         margin: 40px 0;
 
@@ -305,6 +360,12 @@ const agreementChecked = ref(false);
           }
         }
       }
+
+      .formLoading {
+        margin: 20px 0;
+      }
+
+
     }
   }
 }
