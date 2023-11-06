@@ -3,7 +3,7 @@ const swiper = useSwiper()
 </script>
 
 <template>
-  <div @click="swiper.slideNext()" :class="$style.arrowRight"><img src="../../../../assets/images/icons/Arrowright.svg" /></div>
+  <div @click="swiper.slideNext()" :class="$style.arrowRight"><img src="../../../../assets/images/icons/ArrowRight.svg" /></div>
   <div @click="swiper.slidePrev()" :class="$style.arrowLeft"><img src="../../../../assets/images/icons/ArrowLeft.svg" /></div>
 </template>
 
