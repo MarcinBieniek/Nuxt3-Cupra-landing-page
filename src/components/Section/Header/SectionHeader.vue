@@ -2,7 +2,7 @@
   <header :class="$style.header">
     <div :class="$style.container">
       <NuxtLink to="/" >
-        <NuxtImg src="cupra-logo.png" :class="$style.logo"/>
+        <img src="../../../assets/images/cupra-logo.png" :class="$style.logo"/>
       </NuxtLink>
       <ul>
         <li
