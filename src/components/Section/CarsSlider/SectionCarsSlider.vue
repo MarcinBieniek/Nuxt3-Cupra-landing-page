@@ -223,8 +223,7 @@ const carouselItems: carouselItemType[] = [
 
 
   .sliderContainer .sliderRow .sliderItem {
-    justify-content: center;
-      align-items: center;
+
 
     h1 {
       font-size: 30px;
