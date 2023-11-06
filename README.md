@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+## Description
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Simple landing page for CUPRA cars. Project created with Vue/Nuxt 3.
 
-## Setup
+Thank You for taking Your time and checking out my project.
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Running the app
 
 ```bash
-# npm
-npm run dev
+# development
+$ npm run dev
 
-# pnpm
-pnpm run dev
+# test
+$ npm run test
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# build
+$ npm run build
 ```
 
-## Production
+## Stay in touch
 
-Build the application for production:
+Author - [Marcin Bieniek](https://www.linkedin.com/in/marcin-bieniek-617565271/)
 
-```bash
-# npm
-npm run build
+Portfolio - [https://marcindev.netlify.app/](https://marcindev.netlify.app/)
 
-# pnpm
-pnpm run build
 
-# yarn
-yarn build
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
