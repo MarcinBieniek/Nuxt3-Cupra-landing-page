@@ -127,27 +127,27 @@ declare type selectType = {
 const select: selectType[] = [
   {
     id: 1,
-    img: '_nuxt/assets/images/select/01-CupraFormentor.png',
+    img: '/images/select/01-CupraFormentor.png',
     title: 'Cupra Formentor'
   },
   {
     id: 2,
-    img: '_nuxt/assets/images/select/02-CupraLeon.png',
+    img: '/images/select/02-CupraLeon.png',
     title: 'Cupra Leon',
   },
   {
     id: 3,
-    img: '_nuxt/assets/images/select/03-CupraLeonSportstourer.png',
+    img: '/images/select/03-CupraLeonSportstourer.png',
     title: 'Leon Sportstourer',
   },
   {
     id: 4,
-    img: '_nuxt/assets/images/select/04-CupraAteca.png',
+    img: '/images/select/04-CupraAteca.png',
     title: 'Cupra Ateca'
   },
   {
     id: 5,
-    img: '_nuxt/assets/images/select/05-NowaCupraBorn.png',
+    img: '/images/select/05-NowaCupraBorn.png',
     title: 'Nowa Cupra Born'
   },
 ]

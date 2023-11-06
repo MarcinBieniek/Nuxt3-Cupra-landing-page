@@ -38,7 +38,7 @@ const features: featureType[] = [
     description: 'Poczuj pełną wolność dzięki licznym innowacjom.',
     button: 'Umów jazdę próbną',
     link: '/',
-    img: '_nuxt/assets/images/features-1.jpg'
+    img: '/images/features-1.jpg'
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ const features: featureType[] = [
     description: 'Crossover emanujący gracją, dynamizmem i czystym wyrafinowaniem.',
     button: 'Umów jazdę próbną',
     link: '/',
-    img: '_nuxt/assets/images/features-2.jpg'
+    img: '/images/features-2.jpg'
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ const features: featureType[] = [
     description: 'Idealny komfort. Unikalny wystrój wnętrza stworzony w stylu CUPRY.',
     button: 'Umów jazdę próbną',
     link: '/',
-    img: '_nuxt/assets/images/features-3.jpg'
+    img: '/images/features-3.jpg'
   },
 ]
 
