@@ -84,7 +84,7 @@
         <BaseButtonBlack title="Umów jazdę próbną" type="submit" @click.prevent="submitForm" />
 
         <div :class="$style.formLoading">
-          {{ isLoading ? 'Loading...' : 'Wiadomość wysłana' }}
+          {{ isLoading ? 'Wysyłam wiadomość...' : '' }}
         </div>
 
         <div :class="$style.formValidation">

@@ -2,7 +2,7 @@
   <header :class="$style.header">
     <div :class="$style.container">
       <NuxtLink to="/" >
-        <NuxtImg src="/cupra-logo.png" :class="$style.logo"/>
+        <NuxtImg src="cupra-logo.png" :class="$style.logo"/>
       </NuxtLink>
       <ul>
         <li
@@ -95,7 +95,6 @@ const toggleMenu = () => {
       align-items: center;
 
       .logo {
-        height: 20,33px;
         width: 142px;
         padding-right: 20px;
         display: flex;
