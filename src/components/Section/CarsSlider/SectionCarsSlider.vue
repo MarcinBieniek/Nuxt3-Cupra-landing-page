@@ -72,7 +72,7 @@ declare type carouselItemType = {
 const carouselItems: carouselItemType[] = [
   {
     title: 'CUPRA Formentor',
-    image: '_nuxt/assets/images/slider/01-CupraFormentor.png',
+    image: '/images/slider/01-CupraFormentor.png',
     maxSpeed: '204',
     enginePower: '150',
     monthlyPrice: '1439',
@@ -81,7 +81,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'CUPRA Formentor VZ',
-    image: '_nuxt/assets/images/slider/02-Formentor-VZ.png',
+    image: '/images/slider/01-CupraFormentor.png',
     maxSpeed: '250',
     enginePower: '310',
     monthlyPrice: '1553',
@@ -90,7 +90,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'CUPRA Ateca',
-    image: '_nuxt/assets/images/slider/03-Formentor-VZ.png',
+    image: '/images/slider/01-CupraFormentor.png',
     maxSpeed: '247',
     enginePower: '300',
     monthlyPrice: '2334',
@@ -99,7 +99,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Nowa CUPRA Born',
-    image: '_nuxt/assets/images/slider/04-NowaCupraBorn.png',
+    image: '/images/slider/01-CupraFormentor.png',
     maxSpeed: '58',
     enginePower: '204',
     monthlyPrice: '1943',
@@ -108,7 +108,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Leon',
-    image: '_nuxt/assets/images/slider/05-Leon.png',
+    image: '/images/slider/01-CupraFormentor.png',
     maxSpeed: '245',
     enginePower: '300',
     monthlyPrice: '1553',
@@ -117,7 +117,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Leon Sportstourer',
-    image: '_nuxt/assets/images/slider/06-LeonSportstourer.png',
+    image: '/images/slider/01-CupraFormentor.png',
     maxSpeed: '250',
     enginePower: '310',
     monthlyPrice: '1601',
