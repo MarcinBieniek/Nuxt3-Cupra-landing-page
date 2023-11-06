@@ -8,9 +8,13 @@
 
         <div :class="$style.formSelect">
           <div :class="$style.option">
-            <img :src="select[0].img" :class="$style.image"/>
-            <p>{{ select[0].title }}</p>
-            <NuxtImg src="/icons/arrow-down.svg" :class="$style.icon"/>
+            <div></div>
+            <div :class="$style.optionUp">
+              <img :src="select[0].img" :class="$style.image"/>
+              <p>{{ select[0].title }}</p>
+              <img src="../../../assets/images/icons/arrow-down.svg" :class="$style.icon"/>
+            </div>
+            <div :class="$style.optionDown">{{ select[0].title }}</div>
           </div>
         </div>
 
@@ -238,7 +242,7 @@ const agreementChecked = ref(false);
       .formSelect {
         width: 80vw;
         max-width: 553px;
-        height: 145px;
+        height: 155px;
         background-color: $mid-gray;
         display: flex;
         justify-content: flex-end;
@@ -250,24 +254,42 @@ const agreementChecked = ref(false);
           height: 100%;
           border: 1px solid $underline-gray;
           display: flex;
-          justify-content: flex-end;
-          align-items: center;
+          flex-direction: column;
+          align-content: space-between;
 
-          .image {
-            position: absolute;
-            left: 0;
-            top: 5%;
-            width: 306px;
+          .optionUp {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 50px;
+
+            .image {
+              position: absolute;
+              left: 0;
+              top: 5%;
+              width: 306px;
+            }
+
+            p {
+              margin-right: 100px;
+            }
+
+            .icon {
+              height: 10px;
+              width: 10px;
+              margin-right: 10px;
+            }
           }
 
-          p {
-            margin-right: 100px;
+          .empty {
+            display: none;
           }
 
-          .icon {
-            height: 10px;
-            width: 10px;
-            margin-right: 10px;
+          .optionDown {
+            display: none;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 25px;
           }
         }
       }
@@ -372,9 +394,22 @@ const agreementChecked = ref(false);
 
   /* Media queries*/
 
-  @media screen and (max-width: 688px) {
-    .container .formBox .form .formSelect .option p {
-      margin-right: 20px;
+  @media screen and (max-width: 794px) {
+    .container .formBox .form .formSelect .option {
+      .optionUp {
+        p {
+          display: none;
+        }
+
+        .icon {
+          margin-top: 20px;
+        }
+      }
+
+      .optionDown {
+        display: flex;
+        margin-top: 55px;
+      }
     }
   }
 
