@@ -81,7 +81,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'CUPRA Formentor VZ',
-    image: '/images/slider/01-CupraFormentor.png',
+    image: '/images/slider/02-Formentor-VZ.png',
     maxSpeed: '250',
     enginePower: '310',
     monthlyPrice: '1553',
@@ -90,7 +90,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'CUPRA Ateca',
-    image: '/images/slider/01-CupraFormentor.png',
+    image: '/images/slider/03-Formentor-VZ.png',
     maxSpeed: '247',
     enginePower: '300',
     monthlyPrice: '2334',
@@ -99,7 +99,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Nowa CUPRA Born',
-    image: '/images/slider/01-CupraFormentor.png',
+    image: '/images/slider/04-NowaCupraBorn.png',
     maxSpeed: '58',
     enginePower: '204',
     monthlyPrice: '1943',
@@ -108,7 +108,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Leon',
-    image: '/images/slider/01-CupraFormentor.png',
+    image: '/images/slider/05-Leon.png',
     maxSpeed: '245',
     enginePower: '300',
     monthlyPrice: '1553',
@@ -117,7 +117,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Leon Sportstourer',
-    image: '/images/slider/01-CupraFormentor.png',
+    image: '/images/slider/06-LeonSportstourer.png',
     maxSpeed: '250',
     enginePower: '310',
     monthlyPrice: '1601',
@@ -220,8 +220,11 @@ const carouselItems: carouselItemType[] = [
 }
 
 @media screen and (max-width: 650px) {
+
+
   .sliderContainer .sliderRow .sliderItem {
-    padding: 0 10px;
+    justify-content: center;
+      align-items: center;
 
     h1 {
       font-size: 30px;

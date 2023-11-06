@@ -3,8 +3,8 @@ const swiper = useSwiper()
 </script>
 
 <template>
-  <div @click="swiper.slideNext()" :class="$style.arrowRight"><NuxtImg src="icons/Arrowright.svg" /></div>
-  <div @click="swiper.slidePrev()" :class="$style.arrowLeft"><NuxtImg src="icons/ArrowLeft.svg" /></div>
+  <div @click="swiper.slideNext()" :class="$style.arrowRight"><img src="../../../../assets/images/icons/Arrowright.svg" /></div>
+  <div @click="swiper.slidePrev()" :class="$style.arrowLeft"><img src="../../../../assets/images/icons/ArrowLeft.svg" /></div>
 </template>
 
 <style lang="scss" module>

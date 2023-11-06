@@ -26,6 +26,7 @@ const { title } = props;
   border: 1px solid $black;
   background-color: $white;
   position: relative;
+  color: $black;
   cursor: pointer;
 
   &::after {
