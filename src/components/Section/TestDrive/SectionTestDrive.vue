@@ -11,7 +11,7 @@
 
         <div :class="$style.column1">
           <div :class="$style.imageBox">
-            <NuxtImg src="/rent-1.png" :class="$style.image"/>
+            <img src="../../../assets/images/rent-1.png" :class="$style.image"/>
             <span>Design inspirowany wyścigami, stworzony z niezwykłą dbałością o detale.</span>
           </div>
           <div :class="$style.textBox">
@@ -23,7 +23,7 @@
 
         <div :class="$style.column2">
           <div :class="$style.imageBox">
-            <NuxtImg src="/rent-2.png" :class="$style.image"/>
+            <img src="../../../assets/images/rent-2.png" :class="$style.image"/>
             <span>Podróżuj z rozmachem bez kompormisów.</span>
           </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <section :class="$style.hero">
-    <NuxtImg src="/hero.png" :class="$style.image"/>
+    <img src="../../../assets/images/hero.png" :class="$style.image"/>
     <div :class="$style.container">
       <div :class="$style.text">
         <p>CUPRA Formentor</p>

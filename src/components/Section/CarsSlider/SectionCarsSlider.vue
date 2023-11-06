@@ -19,7 +19,7 @@
     >
       <SwiperSlide v-for="slide in carouselItems" :key="slide.title" :class="$style.sliderItem">
         <h1>{{ slide.title}}</h1>
-        <NuxtImg :src="slide.image" :class="$style.image"/>
+        <img :src="slide.image" :class="$style.image"/>
         <p>
           <p v-if="slide.electric">
             Akumulator {{ slide.maxSpeed }} kWh&nbsp;
@@ -72,7 +72,7 @@ declare type carouselItemType = {
 const carouselItems: carouselItemType[] = [
   {
     title: 'CUPRA Formentor',
-    image: 'slider/01-CupraFormentor.png',
+    image: '_nuxt/assets/images/slider/01-CupraFormentor.png',
     maxSpeed: '204',
     enginePower: '150',
     monthlyPrice: '1439',
@@ -81,7 +81,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'CUPRA Formentor VZ',
-    image: 'slider/02-Formentor-VZ.png',
+    image: '_nuxt/assets/images/slider/02-Formentor-VZ.png',
     maxSpeed: '250',
     enginePower: '310',
     monthlyPrice: '1553',
@@ -90,7 +90,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'CUPRA Ateca',
-    image: 'slider/03-Formentor-VZ.png',
+    image: '_nuxt/assets/images/slider/03-Formentor-VZ.png',
     maxSpeed: '247',
     enginePower: '300',
     monthlyPrice: '2334',
@@ -99,7 +99,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Nowa CUPRA Born',
-    image: 'slider/04-NowaCupraBorn.png',
+    image: '_nuxt/assets/images/slider/04-NowaCupraBorn.png',
     maxSpeed: '58',
     enginePower: '204',
     monthlyPrice: '1943',
@@ -108,7 +108,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Leon',
-    image: 'slider/05-Leon.png',
+    image: '_nuxt/assets/images/slider/05-Leon.png',
     maxSpeed: '245',
     enginePower: '300',
     monthlyPrice: '1553',
@@ -117,7 +117,7 @@ const carouselItems: carouselItemType[] = [
   },
   {
     title: 'Leon Sportstourer',
-    image: 'slider/06-LeonSportstourer.png',
+    image: '_nuxt/assets/images/slider/06-LeonSportstourer.png',
     maxSpeed: '250',
     enginePower: '310',
     monthlyPrice: '1601',

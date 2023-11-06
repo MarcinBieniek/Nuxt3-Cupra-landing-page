@@ -8,10 +8,10 @@
       </div>
       <div :class="$style.socials">
         <NuxtLink to="/" >
-          <NuxtImg :class="$style.icon" src="/icons/instagram.png" />
+          <img :class="$style.icon" src="../../../assets/images/icons/instagram.png" />
         </NuxtLink>
         <NuxtLink to="/" >
-          <NuxtImg :class="$style.icon" src="/icons/vimeo.png" />
+          <img :class="$style.icon" src="../../../assets/images/icons/vimeo.png" />
         </NuxtLink>
       </div>
     </div>
