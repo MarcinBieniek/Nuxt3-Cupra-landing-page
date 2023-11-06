@@ -52,13 +52,17 @@
 
   /* Media queries*/
 
-  @media screen and (max-width: 724px) {
+  @media screen and (max-width: 794px) {
     .hero {
       height: 75vh;
     }
-    .hero .container .text p {
-      font-size: 40px;
-      line-height: 50px;
+    .hero .container .text {
+      bottom: 30px;
+
+      p {
+        font-size: 40px;
+        line-height: 50px;
+      }
     }
   }
 

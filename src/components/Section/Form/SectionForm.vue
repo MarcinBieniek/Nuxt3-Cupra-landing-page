@@ -6,14 +6,12 @@
 
       <form :class="$style.form">
 
-        <div :class="$style.formSelect" v-for="item in select" :key="item.id">
-
+        <div :class="$style.formSelect">
           <div :class="$style.option">
-            <NuxtImg :src="item.img" :class="$style.image"/>
-            <p>{{ item.title }}</p>
+            <NuxtImg :src="select[0].img" :class="$style.image"/>
+            <p>{{ select[0].title }}</p>
             <NuxtImg src="/icons/arrow-down.svg" :class="$style.icon"/>
           </div>
-
         </div>
 
         <div :class="$style.formInputs">
@@ -23,6 +21,7 @@
               type="text"
               required
               placeholder="Imię *"
+              v-model="formData.firstName"
             >
             <span>error</span>
           </div>
@@ -32,8 +31,8 @@
               type="text"
               required
               placeholder="Nazwisko (opcjonalnie)"
+              v-model="formData.lastName"
             >
-            <span>error</span>
           </div>
 
           <div :class="$style.formInputsField">
@@ -41,8 +40,8 @@
               type="email"
               required
               placeholder="Adres e-mail *"
+              v-model="formData.email"
             >
-            <span>error</span>
           </div>
 
           <div :class="$style.formInputsField">
@@ -50,8 +49,8 @@
               type="text"
               required
               placeholder="Nr telefonu *"
+              v-model="formData.phone"
             >
-            <span>error</span>
           </div>
 
         </div>
@@ -61,19 +60,19 @@
           <p>Prosimy Cię też o wyrażenie poniższych zgód w celu możliwości przedstawiania Ci atrakcyjnych ofert / promocji produktów, akcesoriów i usług marki CUPRA w przyszłości.</p>
 
           <div :class="$style.checkboxBox">
-            <input type="checkbox" id="check-agreement" />
+            <input type="checkbox" id="check-agreement" v-model="agreementChecked"/>
             <label for="check-agreement">Zgadzam się na przetwarzanie moich danych osobowych przez Plichta spółka z ograniczoną odpowiedzialnością Spółka Komandytowa w celu przedstawienia mi informacji marketingowych i handlowych dotyczących produktów i usług marki CUPRA oraz innych powiązanych z marką CUPRA akcesoriów, produktów i usług motoryzacyjnych za pomocą:</label>
           </div>
           <div :class="$style.checkboxBox">
-            <input type="checkbox" id="check-email" />
+            <input type="checkbox" id="check-email" :disabled="!agreementChecked"/>
             <label for="check-email">E-mail</label>
           </div>
           <div :class="$style.checkboxBox">
-            <input type="checkbox" id="check-phone" />
+            <input type="checkbox" id="check-phone" :disabled="!agreementChecked"/>
             <label for="check-phone">Telefon</label>
           </div>
           <div :class="$style.checkboxBox">
-            <input type="checkbox" id="check-sms" />
+            <input type="checkbox" id="check-sms" :disabled="!agreementChecked"/>
             <label for="check-sms">Wiadomość SMS/MMS</label>
           </div>
 
@@ -125,6 +124,19 @@ const select: selectType[] = [
     title: 'Nowa Cupra Born'
   },
 ]
+
+// form data
+
+const formData = reactive({
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: ''
+});
+
+import { ref } from 'vue';
+
+const agreementChecked = ref(false);
 
 </script>
 

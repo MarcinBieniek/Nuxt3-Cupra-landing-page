@@ -93,8 +93,7 @@ const features: featureType[] = [
           color: $white;
           background-color: $brown;
           padding: 0px 40px 0px 80px;
-          margin: 0;
-          height: 330px;
+          padding-bottom: 40px;
           max-width: 400px;
           position: absolute;
           top: 0;
@@ -131,15 +130,23 @@ const features: featureType[] = [
 
 /* media queries */
 
-@media screen and (max-width: 586px) {
-  .features .container .item .textBox .text p {
-    font-size: 26px;
-    line-height: 34px;
+@media screen and (max-width: 794px) {
+  .features .container .item .textBox .text {
+    padding-bottom: 30px;
+
+    p {
+      font-size: 26px;
+      line-height: 34px;
+    }
   }
 
-  .features .container .itemReverse .textBox .text p {
-    font-size: 26px;
-    line-height: 34px;
+  .features .container .itemReverse .textBox .text {
+    padding-bottom: 30px;
+
+    p {
+      font-size: 26px;
+      line-height: 34px;
+    }
   }
 }
 
