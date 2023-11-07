@@ -18,7 +18,7 @@
         <div :class="$style.gap"></div>
         <BaseButtonBlack title="Umów jazdę próbną" />
       </div>
-      <div :class="$style.hamburger" @click="toggleMenu">
+      <div :class="[$style.hamburger, isMenuOpen ? $style.active : '']" @click="toggleMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -113,6 +113,7 @@ const toggleMenu = () => {
         li {
           margin-right: 20px;
           font-family: $font-light;
+          text-decoration: none;
           text-decoration: underline rgba(0, 0, 0, 0);
           transition: text-decoration-color 300ms;
           text-align: center;
@@ -150,6 +151,7 @@ const toggleMenu = () => {
         .gap {
           width: 10px;
           height: 10px;
+
         }
       }
 
@@ -168,6 +170,20 @@ const toggleMenu = () => {
           background-color: $black;
           transform-origin: left;
           transition: all 1s ease;
+        }
+
+        &.active {
+          span {
+            &:first-child {
+              transform: rotate(45deg);
+            }
+            &:nth-child(2){
+              opacity: 0;
+            }
+            &:last-child{
+              transform: rotate(-45deg)
+            }
+          }
         }
       }
     }
@@ -193,18 +209,13 @@ const toggleMenu = () => {
 
         li {
           margin-bottom: 20px;
-          font-family: $font-light;
-          text-decoration: underline rgba(0, 0, 0, 0);
           transition: text-decoration-color 300ms;
           text-align: center;
 
           a {
             text-decoration: none;
             color: inherit;
-          }
-
-          &:hover {
-            text-decoration-color: $font-black;
+            font-family: $font-light;
           }
         }
       }
@@ -231,6 +242,7 @@ const toggleMenu = () => {
 
         .gap {
           height: 30px;
+          color: $mid-gray;
         }
       }
     }
