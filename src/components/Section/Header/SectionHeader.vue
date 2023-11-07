@@ -113,9 +113,10 @@ const toggleMenu = () => {
         li {
           margin-right: 20px;
           font-family: $font-light;
-          text-decoration: none;
+          -webkit-text-decoration: none;
           text-decoration: underline rgba(0, 0, 0, 0);
           transition: text-decoration-color 300ms;
+          -webkit-transition: text-decoration-color 300ms;
           text-align: center;
 
           a {
@@ -124,6 +125,7 @@ const toggleMenu = () => {
           }
 
           &:hover {
+            text-decoration: underline rgba(0, 0, 0, 0);
             text-decoration-color: $font-black;
           }
         }
